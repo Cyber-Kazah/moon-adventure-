@@ -8,6 +8,28 @@ void drawFon()
     txRectangle (0, 400, 800, 600);//земля
 }
 
+
+
+void drawZastava()
+{
+ txSetFillColor (TX_BLACK);
+ txRectangle (0, 0, 800, 600);
+
+ txSetFillColor (RGB(195, 195, 195));
+ txRectangle (0, 195, 795, 395);
+
+ txSetColor (TX_WHITE);
+ txSelectFont ("Comic Sans MS", 55);
+ txTextOut (300, 250, "Лунатрица.");
+
+
+
+
+
+}
+
+
+
 void drawDoma(int y)
 {
     txSetFillColor (RGB(64, 64, 64));//дом один
@@ -53,6 +75,7 @@ void drawMoon(int x)
    txCircle(491, 345, 25);
    txLine (432, 372, 436, 453);
    txLine (542, 372, 544, 443);
+   txSelectFont ("Times New Roman", 20);
    txTextOut (450, 204, "Я тебя люблю. Ты моё золотце и свет.");
 
 
@@ -110,7 +133,8 @@ void drawMoon(int x)
     txCircle (480, 239, 20);//голова
 
     txSetColor (RGB(0, 255, 0));
-    txTextOut (100, 185, "Мой замок на много лучше чем твоя конура.");
+    txSelectFont ("Times New Roman", 20);
+    txTextOut (320, 156, "Мой замок на много лучше чем твоя конура.");
 
     txSetColor (TX_WHITE);
     txSetFillColor(RGB(221, 221, 0));
@@ -119,7 +143,7 @@ void drawMoon(int x)
 }
 
  void drawPara2()
- {
+{
 txSetColor (RGB(255, 0, 0));//ковёр
    txSetFillColor(RGB(255, 0, 0));
    txRectangle (209, 402,542, 570);
@@ -149,7 +173,7 @@ txSetColor (RGB(255, 0, 0));//ковёр
   }
 
  void drawRicar2()
- {
+{
 txSetColor (TX_BLACK);//зАмок
 txSetFillColor (RGB(147, 147, 147));
 txRectangle (0, 400, 236, 189);//основа
@@ -204,9 +228,8 @@ txPolygon (korona, 7);
 
  }
 
-
  void drawNevidimka(int x)
- {
+{
     txSetColor (RGB(0, 0, 30));
     txSetFillColor (RGB(0, 0, 30));
     txCircle (x, 98, 50);
@@ -215,7 +238,7 @@ txPolygon (korona, 7);
   }
 
  void drawYaponec()
- {
+{
    txSetColor (TX_BLACK);
    txSetFillColor(RGB(195, 195, 195));//фундамент
    txRectangle (428, 400, 800, 341);
@@ -272,11 +295,11 @@ txPolygon (korona, 7);
 
 
    txSetColor (RGB(163, 73, 164));
-   txTextOut (278, 80, "Ты посмел оскорбить наш семейный дом?! Ты не уйдёшь живым!.");
+   txTextOut (95, 70, "Ты посмел оскорбить наш семейный дом?! Ты не уйдёшь живым!.");
 
 
 
-   //в будущем ты должен сделать лицо Киры Йошикаге, его лицо в папке под именем лицо 2 бери элипс
+   //в будущем ты должен сделать лицо Киры Йошикаге, его лицо в папке под именем лицо 2 бери полигон
 
 
 
@@ -284,8 +307,8 @@ txPolygon (korona, 7);
 
  }
 
-  void drawNevidimka2(int x)
-  {
+ void drawNevidimka2(int x)
+{
 
     txSetColor (RGB(0, 0, 0));
     txSetFillColor (RGB(0, 0, 0));
@@ -294,28 +317,23 @@ txPolygon (korona, 7);
 
    }
 
-   void drawFon2()
-  {
+ void drawFon2()
+{
 txSetFillColor (RGB(0, 0, 0));
 txRectangle (0, 0, 800, 600);
 
    }
 
-
-
-  void drawHoho()
-
-  {
+ void drawHoho()
+{
 
        txSetColor (RGB(0, 255, 0));
        txTextOut (378, 255, "Ха ха.");
 
    }
 
-
-
-  void drawRoja()
- {
+ void drawRoja()
+{
     txSetColor (TX_WHITE);
     txSetFillColor (RGB(0, 255, 0));
     POINT Roja[9] = {{161, 125}, {112, 197}, {104, 350}, {135, 449}, {181, 466}, {298, 411}, {336, 358}, {359, 286}, {365, 185}};//овал лица
@@ -342,10 +360,8 @@ txRectangle (0, 0, 800, 600);
 
   }
 
-
-
  void drawPonti()
- {
+{
 
        txSetColor (RGB(0, 255, 0));
        txTextOut (378, 255, "Ты серьёзно думаешь, что победишь? Ну попробуй >:).");
@@ -354,10 +370,8 @@ txRectangle (0, 0, 800, 600);
 
    }
 
-
-
-  void drawOpasno(int x)
-  {
+ void drawOpasno(int x)
+{
     //х=414 - базовая точка
     txSetColor (TX_WHITE);
     txSetFillColor (RGB(163, 73, 164));
@@ -385,10 +399,8 @@ txRectangle (0, 0, 800, 600);
 
 }
 
-
-
-  void drawDead()
-  {
+ void drawDead()
+{
 
   txSetColor (TX_WHITE);
     txSetFillColor (RGB(0, 255, 0));
@@ -421,26 +433,19 @@ txRectangle (0, 0, 800, 600);
 
   }
 
+ void drawSlova()
+{
 
 
 
-  void drawSlova()
-  {
-
-
-
-  txSetFillColor(RGB(195, 195, 195));
+  txSetFillColor(RGB(163, 73, 164));
   txTextOut (352, 86, "Получай!.");
 
 
    }
 
-
-
-
-
-  void drawLuna()
-  {
+ void drawLuna()
+{
 
 
   txSetColor (TX_WHITE);
@@ -448,16 +453,13 @@ txRectangle (0, 0, 800, 600);
   txCircle (355, 255, 150);
 
 
+   txSetColor (RGB(195, 195, 195));
+   txSetFillColor (RGB(195, 195, 195));
+   txRectangle (310, 180, 555, 290);
+   txRectangle (200, 215, 325, 250);//лямка
+   txPlaySound("The end.wav");
 
   }
-
-
-
-
-
-
-
-
 
 
 
@@ -479,6 +481,21 @@ txCreateWindow (800, 600);
 
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
+
+    while(xNevidimka2 < 850)
+    {
+      txBegin();
+      drawZastava();
+
+      xNevidimka2 = xNevidimka2 + 5;
+         txEnd();
+         txSleep(5);
+
+
+
+    }
+
+
 
 
     while(xMoon < 850)
@@ -523,8 +540,8 @@ txCreateWindow (800, 600);
 
     }
 
-    xMoon = -900;//кадр с парой 2
-    while(xMoon < 950)
+    xMoon = 850;//кадр с парой 2
+    while(xMoon < 1200)
     {
 
         txBegin();
@@ -533,9 +550,8 @@ txCreateWindow (800, 600);
 
         xMoon = xMoon + 20;
         txEnd();
-        txSleep(20);
+        txSleep(10);
      }
-
 
     xMoon = -100;//король
     while(xMoon < 500)
@@ -549,7 +565,6 @@ txCreateWindow (800, 600);
         txEnd();
         txSleep(15);
     }
-
 
     xMoon = 500;//луне интересно
     while(xMoon < 600)
@@ -565,9 +580,9 @@ txCreateWindow (800, 600);
 
        }
 
-       xNevidimka = 500;//кадр с японцем
-       while (xNevidimka < 850)
-       {
+    xNevidimka = 500;//кадр с японцем
+    while (xNevidimka < 850)
+    {
 
        txBegin();
        drawFon();
@@ -581,11 +596,9 @@ txCreateWindow (800, 600);
 
        }
 
-
-
     xNevidimka2 = 500;//тёмный экран
     while(xNevidimka2 < 850)
-     {
+    {
         txBegin();
         drawFon2();
         drawNevidimka2(xNevidimka2);
@@ -597,10 +610,9 @@ txCreateWindow (800, 600);
 
       }
 
-
-      xNevidimka2 = 500;
-      while(xNevidimka2 < 850)
-      {
+    xNevidimka2 = 500;
+    while(xNevidimka2 < 850)
+    {
 
          txBegin();
          drawFon2();
@@ -614,10 +626,9 @@ txCreateWindow (800, 600);
          txSleep(25);
       }
 
-
-      xOpasno = 1000;
-      while(xOpasno > 250)
-      {
+    xOpasno = 1000;
+    while(xOpasno > 250)
+    {
 
          txBegin();
          drawFon2();
@@ -631,10 +642,8 @@ txCreateWindow (800, 600);
          txSleep(0.1);
       }
 
-
-
-      xNevidimka2 = 500;
-      while(xNevidimka2 < 850)
+    xNevidimka2 = 500;
+    while(xNevidimka2 < 850)
     {
 
          txBegin();
@@ -642,7 +651,7 @@ txCreateWindow (800, 600);
          drawNevidimka2(xNevidimka2);
          drawLuna();
 
-
+txPlaySound("The end.wav");
 
 
 
