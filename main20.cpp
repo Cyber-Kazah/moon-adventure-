@@ -1,6 +1,6 @@
 #include "TXLib.h"
 
-void drawFon()
+ void drawFon()
 {
     txSetFillColor (RGB(0, 0, 30));
     txRectangle (0, 0, 800, 400);//небо
@@ -8,9 +8,7 @@ void drawFon()
     txRectangle (0, 400, 800, 600);//земля
 }
 
-
-
-void drawZastava()
+ void drawZastava()
 {
  txSetFillColor (TX_BLACK);
  txRectangle (0, 0, 800, 600);
@@ -28,9 +26,7 @@ void drawZastava()
 
 }
 
-
-
-void drawDoma(int y)
+ void drawDoma(int y)
 {
     txSetFillColor (RGB(64, 64, 64));//дом один
     txRectangle (158, y, 22, 397);
@@ -40,7 +36,7 @@ void drawDoma(int y)
 
 }
 
-void drawDoroga()
+ void drawDoroga()
 {
     txSetFillColor (RGB(24, 24, 24));//дорога
     txRectangle (420, 400, 738, 600);
@@ -52,7 +48,7 @@ void drawDoroga()
     txRectangle (570, 525, 592, 598);
 }
 
-void drawMoon(int x)
+ void drawMoon(int x)
 {
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
@@ -458,6 +454,22 @@ txRectangle (0, 0, 800, 600);
    txRectangle (310, 180, 555, 290);
    txRectangle (200, 215, 325, 250);//лямка
    txPlaySound("The end.wav");
+
+   txSetFillColor (TX_RED);
+   txRectangle (350, 205, 535, 260);
+
+   txSetFillColor (RGB(255, 159, 159));
+   txEllipse (370, 300, 465, 500);
+
+   txSetFillColor(RGB(163, 73, 164));
+   txTextOut (450, 85, "Ого! Вот это графика, ставлю 10/10.");
+
+
+
+
+
+
+
 
   }
 
