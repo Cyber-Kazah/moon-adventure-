@@ -473,8 +473,31 @@ txRectangle (0, 0, 800, 600);
 
   }
 
+ void drawTitri()
+{
+   txSetColor(TX_BLACK);
+   txRectangle (0, 0, 800, 600);
 
 
+
+
+   txSetColor(TX_WHITE);
+   txSetFillColor(RGB(163, 73, 164));
+   txDrawText   (100, 250, 700, 350, "КОНЕЦ \n"
+                        "Но я могу лучше,\n"
+                         "Луна Райан Гослинг"\n"
+                         "Девушка-Дженифер Лопес"\n"
+                         "Парень-Майкл Джордан"\n");
+
+
+
+
+
+
+
+
+
+}
 
 int main()
 {
@@ -506,9 +529,6 @@ txCreateWindow (800, 600);
 
 
     }
-
-
-
 
     while(xMoon < 850)
     {
@@ -663,7 +683,7 @@ txCreateWindow (800, 600);
          drawNevidimka2(xNevidimka2);
          drawLuna();
 
-txPlaySound("The end.wav");
+
 
 
 
@@ -673,7 +693,37 @@ txPlaySound("The end.wav");
 
 
 
-      }
+    }
+
+    xNevidimka2 = 500;
+    while(xNevidimka2 < 850)
+
+    {
+
+         txBegin();
+         drawNevidimka2(xNevidimka2);
+         drawTitri();
+
+
+
+
+
+         xNevidimka2 = xNevidimka2 + 5;
+         txEnd();
+         txSleep(25);
+
+
+
+
+
+
+
+
+
+
+    }
+
+
 
 
 
